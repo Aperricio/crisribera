@@ -54,12 +54,16 @@
 
         table {
             margin-top: 20px;
+            border-collapse: collapse;
         }
 
         td, th {
             padding: 5px 10px;
             width: 25vw;
-            border-collapse: collapse;
+        }
+
+        tr:nth-child(even):not(:first-child) {
+            background-color: rgba(128, 0, 128, 0.2);
         }
 
         th {
