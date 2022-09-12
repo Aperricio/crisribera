@@ -88,6 +88,14 @@
             table {
                 font-size: 0.9rem;
             }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            header {
+                height: 70px;
+            }
         }
 
         @media (max-width: 450px) {
@@ -159,7 +167,7 @@
         </tr>
     </table>
     <div style="margin: 20px;">
-        <p id="aviso" style="max-width: 600px; border: 5px solid blueviolet; padding: 20px; background-color: aqua; border-radius: 15px; position: absolute; top: 150px; margin-right: auto; margin-left: auto; left: 0; right: 0; display: none;">Demo de cómo podría quedar la opción online de las actividades propuestas por los usuarios del CRIS. Hay tres ejemplos de cómo presentar a los interesados: en uno, la lista está visible, con un punto y coma (;) como separación; en el segundo, hay que hacer clic para verlos; en el tercero, los nombres aparecen en una columna (a partir del cuarto está para rellenar). No está adaptada para las diferentes resoluciones. Es un diseño genérico. <br><br><span id="cerrar">CLIC/TOCAR EN ESTA VENTANA PARA QUE DESAPAREZCA</span></p>
+        <p id="aviso" style="max-width: 600px; border: 5px solid blueviolet; padding: 20px; background-color: aqua; border-radius: 15px; position: absolute; top: 150px; margin-right: auto; margin-left: auto; left: 0; right: 0; display: none;"><span id="info" style="font-weight: 900;">NOTA INFORMATIVA:<br><br></span>Demo de cómo podría quedar la opción online de las actividades propuestas por los usuarios del CRIS.<br><br>Hay tres ejemplos de cómo presentar a los interesados: en uno, la lista está visible, con un punto y coma (;) como separación; en el segundo hay que hacer clic para verlos; en el tercero, los nombres aparecen en una columna (a partir del cuarto está para rellenar).<br><br>No está perfectamente adaptada para las diferentes resoluciones. Es un diseño genérico, y se recomienda que en los móviles con pantallas pequeñas (como el iPhone SE) se vea apaisado.<br><br>Las líneas de las tablas también pueden ser modificadas. Por ejemplo, pueden ser todo verde si se va a realizar la actividad, naranja si se está debatiendo y roja si ya ha caducado (hasta que se elimine) o se rechaza la propuesta.<br><br><span id="cerrar">CLIC/TOCAR EN ESTA VENTANA PARA QUE DESAPAREZCA Y VER EL CONTENIDO</span></p>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -174,9 +182,10 @@
         setTimeout(function() {
             $('#aviso').fadeIn(1000);
         }, 1500);
-        $('#cerrar').css({
+        $('#cerrar, #info').css({
             "display": "flex",
-            "justify-content": "center"
+            "justify-content": "center",
+            "text-align": "center",
         });
         $('#aviso').hover(function() {
             $(this).css({
