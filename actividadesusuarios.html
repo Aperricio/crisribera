@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades propuestas por los usuarios del CRIS La Ribera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('img/ocio.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header{
+            text-align: center;
+            background-color: blueviolet;
+            color: pink;
+            width: 100vw;
+            height: 100px;
+            display: table-cell;
+            vertical-align: middle;
+            box-shadow: 0px 1px 20px rgba(128, 0, 128, 0.5);
+            border-radius: 0 0 10px 10px;
+        }
+
+        h1 {
+            padding: 15px;
+            font-size: 2.5rem;
+        }
+
+        .si, .no {
+            border-radius: 3px;
+        }
+        
+        .si {
+            background-color: rgb(17, 187, 17);
+        }
+
+        .no {
+            background-color: red;
+        }
+
+        td, details {
+            text-align: center;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+
+        td, th {
+            padding: 5px 10px;
+            width: 25vw;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Actividades propuestas por los usuarios</h1>
+    </header>
+    <table>
+        <tr>
+            <th>Actividad</th>
+            <th>Interesados</th>
+            <th>¿Se hace?</th>
+            <th>Fecha</th>
+        </tr>
+        <tr>
+            <td>Película</td>
+            <td><details><summary>Ver</summary>
+            Pablo<br>Paulo<br>Paul</details></td>
+            <td class="si">Sí</td>
+            <td>Lunes 1, 19:00h</td>
+        </tr>
+        <tr>
+            <td>Petanca</td>
+            <td><details><summary>Ver</summary>Arale</details></td>
+            <td class="no">Faltan interesados</td>
+            <td><hr></td>
+        </tr>
+        <tr>
+            <td>Paracaidismo sin paracaídas</td>
+            <td><details><summary>Ver</summary>Nadie...
+            </details></td>
+            <td class="no">NI DE COOOÑA</td>
+            <td>1 de enero de 2099</td>
+        </tr>
+        <tr>
+            <td>Cobrar</td>
+            <td><details><summary>Ver</summary>Todos, usuarios y profesionales</details></td>
+            <td class="si">¡CHÍÍÍÍÍÍÍ!</td>
+            <td>Todos los días</td>
+        </tr>
+    </table>
+    <p style="max-width: 600px; margin: 40px auto; border: 1px solid purple; padding: 20px; background-color: aqua; border-radius: 15px">Demo de cómo podría quedar la opción online de las actividades propuestas por los usuarios del CRIS. Hacer clic en "Ver" para mostrar los usuarios interesados puede cambiar a simplemente poner los nombres. No está adaptada para las diferentes pantallas, por lo que en móviles puede que haya que deslizar o ponerlo en horizontal.</p>
+</body>
+</html>
