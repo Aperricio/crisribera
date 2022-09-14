@@ -38,7 +38,7 @@
             font-size: 2.5rem;
         }
 
-        .si, .no {
+        .si, .no, .puede {
             border-radius: 3px;
         }
         
@@ -133,8 +133,12 @@
                 border: 1px solid black;
             }
 
-            td {
+            td, th {
                 border: 1px solid black;
+            }
+
+            tr:not(:first-child) {
+                height: 200px;
             }
 
             .tachado {
@@ -142,6 +146,15 @@
             }
 
             .no {
+                color: black;
+            }
+
+            #aviso {
+                display: none;
+            }
+
+            header {
+                border-bottom: 5px solid black;
                 color: black;
             }
         }
@@ -159,12 +172,18 @@
             margin: 0 auto;
         }
 
+        h2 {
+            margin: 10px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <h1>Actividades Autogestionadas</h1>
     </header>
+    <h2>Opción A</h2>
     <table id="tabla1">
         <tr>
             <th>Actividad</th>
@@ -181,7 +200,7 @@
         <tr>
             <td>Petanca</td>
             <td><details><summary>Ver</summary>Arale</details></td>
-            <td class="no">Faltan interesados</td>
+            <td class="puede">Faltan interesados</td>
             <td class="tachado"></td>
         </tr>
         <tr>
@@ -211,6 +230,7 @@
     </table>
     <br><br>
     <p>En este primer ejemplo, está en rojo o verde si se hace o no. Al pasar el cursor por encima o tocarla, el color de la línea se vuelve amarillo claro.</p><br><br><br>
+    <h2>Opción B</h2>
     <table id="tabla2">
         <tr>
             <th>Actividad</th>
@@ -264,7 +284,7 @@
     </div>
     <p>En esta segunda opción, las líneas están en colores, y debajo se indica qué significa cada uno. Para evitar que dos del mismo color no se distingan como actividades diferentes, hay que añadir una línea.</p><br><br>
     <p>Lógicamente, se aceptan sugerencias. El fondo me pareció chulo cuando busqué imágenes sobre ocio; el tamaño y fuente del texto pueden modificarse; la barra diagonal para cuando no hay fecha puede ser una horizontal o no poner nada; Y los colores también pueden ser otros. Los usé porque quedaban bien con el fondo. La ventana informativa que aparece al entrar se eliminará.</p><br><br>
-    <p>Y otra cosa que me parece interesante es que esto se puede hacer y prepararlo para imprimir. Se pueden hacer cambios para que al imprimir no salgan colores, que las casillas sean más grandes (por si hay que añadir algo a mano) y mil cosas. La idea de que exista esto en la web es que esté actualizada en tiempo real, virtualmente en tiempo real. Que alguien pueda quedar con otra persona, se actualice la web y que cualquiera que no esté en el centro pueda consultar esta tabla.</p>
+    <p>Y otra cosa que me parece interesante es que esto se puede hacer y prepararlo para imprimir. Se pueden hacer cambios para que al imprimir no salgan colores, que las casillas sean más grandes (por si hay que añadir algo a mano) y mil cosas (Ctrl + P en el navegador para ver la diferencia, que aún habría que ajustarlo.). La idea de que exista esto en la web es que esté actualizada en tiempo real, virtualmente en tiempo real. Que alguien pueda quedar con otra persona, se actualice la web y que cualquiera que no esté en el centro pueda consultar esta tabla.</p>
     <div style="margin: 20px;">
         <p id="aviso" style="border: 5px solid blueviolet; padding: 20px; background-color: aqua; border-radius: 15px; position: absolute; top: 150px; margin-right: auto; margin-left: auto; left: 0; right: 0; display: none;"><span id="info" style="font-weight: 900;">NOTA INFORMATIVA:<br><br></span>Demo de cómo podría quedar la opción online de las actividades propuestas por los usuarios del CRIS.<br><br>Se me ocurren tres ejemplos de cómo presentar a los interesados: en uno, la lista está visible, con un punto y coma (;) como separación; en el segundo hay que hacer clic para verlos; en el tercero, los nombres aparecen en una columna (a partir del cuarto está para rellenar).<br><br>No está perfectamente adaptada para las diferentes resoluciones. Es un diseño genérico, y se recomienda que en los móviles con pantallas pequeñas (como el iPhone SE) se vea apaisado.<br><br><span id="cerrar">CLIC/TOCAR EN ESTA VENTANA PARA QUE DESAPAREZCA Y VER EL CONTENIDO</span></p>
     </div>
